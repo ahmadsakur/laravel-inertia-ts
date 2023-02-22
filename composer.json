@@ -6,12 +6,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
-        "guzzlehttp/guzzle": "^7.5",
+        "guzzlehttp/guzzle": "^6.5|^7.0.1",
         "inertiajs/inertia-laravel": "^0.6.9",
         "laravel/framework": "^10.0",
         "laravel/pennant": "^1.1",
         "laravel/sanctum": "^3.2.1",
         "laravel/tinker": "^2.8",
+        "mrt1m/playstation-store-api": "^0.3.0",
         "tightenco/ziggy": "^1.5"
     },
     "require-dev": {

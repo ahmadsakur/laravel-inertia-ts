@@ -10,6 +10,11 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Clara';
 
+const cleanApp = () => {
+    document.getElementById('app').removeAttribute('data-page');
+};
+
+document.addEventListener('inertia:finish', cleanApp);
 createInertiaApp({
     title: (title) => `${title} / ${appName}`,
     resolve: (name) => resolvePageComponent(`./Pages/${name}.tsx`, import.meta.glob('./Pages/**/*.tsx')),
@@ -22,4 +27,4 @@ createInertiaApp({
         );
     },
     progress: false,
-});
+}).then(cleanApp);

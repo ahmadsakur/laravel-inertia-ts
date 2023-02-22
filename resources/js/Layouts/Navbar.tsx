@@ -29,6 +29,11 @@ export default function Navbar() {
                                     Dashboard
                                 </NavLink>
                             )}
+                            {user && (
+                                <NavLink active={route().current('store.index')} href='/store'>
+                                    Store
+                                </NavLink>
+                            )}
                         </div>
                     </div>
                     {user ? (
